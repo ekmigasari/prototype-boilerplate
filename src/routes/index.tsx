@@ -1,8 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight } from "@phosphor-icons/react";
-import { Button } from "@/components/ui/button";
+import { createFileRoute } from "@tanstack/react-router"
+import { ArrowRight } from "@phosphor-icons/react"
+import { Button } from "@/components/ui/button"
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({ component: Home })
 
 function Home() {
   return (
@@ -59,5 +59,5 @@ function Home() {
         </span>
       </footer>
     </div>
-  );
+  )
 }
