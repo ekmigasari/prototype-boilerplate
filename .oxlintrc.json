@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "react-perf", "vitest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/set-state-in-effect": "warn"
+  },
+  "ignorePatterns": [
+    ".output/",
+    ".tanstack/",
+    "node_modules/",
+    "public/",
+    "src/routeTree.gen.ts"
+  ]
+}
