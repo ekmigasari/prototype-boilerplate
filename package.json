@@ -4,8 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
+    "dev:cloudflare": "VITE_DEPLOY_TARGET=cloudflare vite dev --port 3000",
     "build": "vite build",
+    "build:cloudflare": "VITE_DEPLOY_TARGET=cloudflare vite build",
     "preview": "vite preview",
+    "preview:cloudflare": "VITE_DEPLOY_TARGET=cloudflare vite preview",
+    "deploy:cloudflare": "pnpm build:cloudflare && wrangler deploy",
+    "cf-typegen": "wrangler types",
     "test": "vitest run",
     "lint": "oxlint",
     "format": "oxfmt --write \"src/**/*.{ts,tsx,js,jsx}\"",
@@ -46,6 +51,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.54.5",
     "@tanstack/devtools-vite": "latest",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
@@ -58,6 +64,7 @@
     "oxlint": "^1.81.0",
     "typescript": "^6.0.3",
     "vite": "^8",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.0",
+    "wrangler": "^4.129.1"
   }
 }
